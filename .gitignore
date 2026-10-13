@@ -1,0 +1,32 @@
+# Upload only the code and the public data. Everything else stays on this computer.
+/*
+!/.gitignore
+!/README.md
+!/requirements.txt
+
+# Code
+!/src/
+/src/*
+!/src/model.py
+!/src/data_reader.py
+!/src/feature_engineering.py
+!/src/analyze.py
+!/src/data_pre_processing.py
+
+# Data without post text: the LLM labels and the Brent prices
+!/data/
+/data/*
+!/data/features.json
+!/data/posts.json
+!/data/oil_indices/
+/data/oil_indices/*
+!/data/oil_indices/wti_post_prices.csv
+!/data/oil_indices/brent_1d.csv
+
+# Never upload, wherever they are
+.env
+__pycache__/
+.DS_Store
+.vibes
+.claude
+

@@ -1,0 +1,11 @@
+# To run model.py
+pandas==3.0.3
+numpy==2.4.5
+scikit-learn==1.8.0
+joblib==1.5.3
+tqdm==4.67.3
+
+# Only to label new posts with GPT (feature_engineering.py)
+openai==2.37.0
+pydantic==2.13.4
+python-dotenv==1.2.2
