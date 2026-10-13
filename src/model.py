@@ -19,12 +19,12 @@ PARAMS = {
     'min_samples_leaf': 10,         # every answer must be backed by at least 10 posts
     'l2_regularization': 1.0,       # shrinks extreme leaf values
     'max_iter': 100,                # number of trees
-    'class_weight': 'balanced',     # up and down days count equally, even if one is more common
+    'class_weight': 'balanced',     # up, flat and down count equally, even if one is more common
     'random_state': 0,
 }
 
 def build_model():
-    """ Returns an unfitted classifier for the per-post target: did the post's Brent close go up (1) or not (0).
+    """ Returns an unfitted classifier for the per-post target: the WTI move in the 30 seconds after the post, up (1), flat (0) or down (-1).
     The settings are fixed in advance, not tuned.
     """
     return HistGradientBoostingClassifier(**PARAMS)
